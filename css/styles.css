@@ -1380,12 +1380,11 @@ a.resume-btn {
 
 a.resume-btn:hover,
 a.resume-btn:active {
-  /*background-position: -100% 100%;*/
   color: #fff;
-  /*font-weight: 400;*/
   border: 2px solid #ccc;
   background-color: rgba(254, 254, 254, 0.2);
   padding: 10px 30px;
+  transform: translateY(100%);
 }
 
 /* ======= PORTFOLIO ======= */
@@ -2055,4 +2054,13 @@ body {
   #sectionmargin {
     margin: 0 25%;
   }
+}
+
+.head-animation {
+  transition: all 0.2s;
+}
+
+.head-animation:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
