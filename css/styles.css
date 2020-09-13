@@ -487,7 +487,7 @@ a.active {
 
 #intro {
   background: url(../assets/turned-on-imac-aluminum-1781629.jpg);
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -2043,4 +2043,16 @@ body {
 
 #sectionmargin {
   margin: 0 25%;
+}
+
+@media only screen and (min-width: 200px) {
+  #sectionmargin {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  #sectionmargin {
+    margin: 0 25%;
+  }
 }
