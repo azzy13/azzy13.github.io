@@ -22,7 +22,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
+
+
+<!-- <script>
+    for displaying right after load
+    $(window).on('load',function(){
+        $(".loader-wrapper").fadeOut('slow');
+    });
+
+</script> -->
+<script>
+jQuery(document).ready(function ($) {
+    $(window).load(function () {
+        setTimeout(function(){
+            $('.loader-wrapper').fadeOut('fast', function () {
+            });
+        },1900); // set the time here
+    });  
+});
+</script>
+
+<script>
+    setTimeout(function(){
+  document.getElementById("main-content").style.display = "block"; 
+ }, 2100);
+</script>
+
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom" data-offset="100">
+    <div class="loader-wrapper"></div>
+    <main id="main-content">
     <div id="content">
         <!-- Navigation -->
         <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -501,6 +529,7 @@
                     </div>
                 </div>
             </div>
+        </main>
             <!-- container -->
         </footer>
         <!-- Core JavaScript Files -->

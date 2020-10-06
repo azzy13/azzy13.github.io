@@ -2064,3 +2064,30 @@ body {
   transform: skewY(2deg) skewX(15deg) scale(1);
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
+
+.loader-wrapper {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: url(../img/Rengoku.gif) no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  z-index: 1000;
+}
+
+@media only screen and (max-width: 500px) {
+  .loader-wrapper {
+    background-size: contain;
+    margin: auto;
+    top: 50%;
+    min-height: 100%;
+  }
+}
+
+#main-content {
+  display: none;
+}
