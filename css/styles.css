@@ -2066,26 +2066,42 @@ body {
 }
 
 .loader-wrapper {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  background: url(../img/Rengoku.gif) no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  z-index: 1000;
+  position: relative;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 800px) {
   .loader-wrapper {
-    background-size: contain;
-    margin: auto;
-    top: 50%;
-    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: url(../img/Rengoku.gif) no-repeat center;
+    background-size: cover;
+    z-index: 1000;
   }
+}
+
+@media only screen and (max-width: 800px) {
+  .loader-wrapper {
+    height: 380px;
+    width: 380px;
+    top: 50%;
+    left: 50%;
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    background: url(/img/sharingant.gif) no-repeat center;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.loader {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: url(/img/gradient.jpg) no-repeat;
+  background-position: right;
 }
 
 #main-content {
